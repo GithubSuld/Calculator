@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            align-items: center;
+            background-color: black;
+            color: white;
+        }
+
+        .mainpart {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mainpart div {
+            display: flex;
+        }
+
+        .mainpart button {
+            width: 70px;
+            height: 70px;
+            margin: 5px;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: right;
+            margin-left: -18px;
+        }
+
+        td {
+            padding: 10px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainpart">
+        <table>
+            <tr>
+                <td id="display">0</td>
+            </tr>
+        </table>
+        <div>
+            <button onclick="onclickButtonSeven()" id="button-7">7</button>
+            <button onclick="onclickButtonEight()" id="button-8">8</button>
+            <button onclick="onclickButtonNine()" id="button-9">9</button>
+            <button onclick="onclickMinus()" style="background-color: orange;">-</button>
+            <button onclick="onclickMultiply()" style="background-color: orange;">*</button>
+        </div>
+        <div>
+            <button onclick="onclickButtonFour()">4</button>
+            <button onclick="onclickButtonFive()">5</button>
+            <button onclick="onclickButtonSix()">6</button>
+            <button onclick="onclickAdd()" style="background-color: orange;">+</button>
+            <button onclick="onclickDivide()" style="background-color: orange;">/</button>
+        </div>
+        <div>
+            <button onclick="onclickButtonOne()">1</button>
+            <button onclick="onclickButtonTwo()">2</button>
+            <button onclick="onclickButtonThree()">3</button>
+            <button onclick="calculate()" style="background-color: orange;">=</button>
+        </div>
+        <div>
+            <button onclick="onclickButtonZero()">0</button>
+            <button style="background-color: grey;">-/+</button>
+            <button onclick="clearDisplay()" style="background-color: orange;">C</button>
+        </div>
+    </div>
+
+    <script src="calc.js"></script>
+</body>
+
+</html>
